@@ -24,11 +24,11 @@ def polyCube(path, name, size, axisDivision):
     box.parm("divrate3").set(axisDivision) # axis division 3
 
 # polygon tube
-def polyTorus(path, name, radius, height, rowsDivision, colsDivision):
-    torus = hou.node(path).createNode('tube') # default houdini tube
-    torus.setName(name) # torus name
-    torus.parm("type").set("poly") # setting it's type to polygon
-    torus.parm("radscale").set(radius) # torus radius
-    torus.parm("height").set(height) # torus height
-    torus.parm("rows").set(rowsDivision) # rows division
-    torus.parm("cols").set(colsDivision) # columns division
+def polyTube(path, name, radius, height, rowsDivision, colsDivision):
+    tube = hou.node(path).createNode('tube') # default houdini tube
+    tube.setName(name) # tube name
+    tube.parm("type").set("poly") # setting it's type to polygon
+    tube.parm("radscale").set(radius) # tube radius
+    tube.parm("height").set(height) # tube height
+    tube.parm("rows").set(rowsDivision) # rows division
+    tube.parm("cols").set(colsDivision) # columns division
