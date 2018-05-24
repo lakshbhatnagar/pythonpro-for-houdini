@@ -12,6 +12,7 @@ def polySphere(path, name="polySphere", radius=1, rowsDivision=13, colsDivision=
     sphere.parm("rows").set(rowsDivision) # rows division
     sphere.parm("cols").set(colsDivision) # columns division
     sphere.parm("scale").set(radius) # sphere radius
+    return sphere
 
 # polygon cube
 def polyCube(path, name="polyCube", size=1, axisDivision=4):
@@ -22,6 +23,7 @@ def polyCube(path, name="polyCube", size=1, axisDivision=4):
     box.parm("divrate1").set(axisDivision) # axis division 1
     box.parm("divrate2").set(axisDivision) # axis division 2
     box.parm("divrate3").set(axisDivision) # axis division 3
+    return box
 
 # polygon tube
 def polyTube(path, name="polyTube", radius=1, height=1, rowsDivision=2, colsDivision=12):
@@ -32,6 +34,7 @@ def polyTube(path, name="polyTube", radius=1, height=1, rowsDivision=2, colsDivi
     tube.parm("height").set(height) # tube height
     tube.parm("rows").set(rowsDivision) # rows division
     tube.parm("cols").set(colsDivision) # columns division
+    return tube
 
 # polygon torus
 def polyTorus(path, name="polyTorus", radiusX=1, radiusY=0.5, scale=1, rowsDivision=12, colsDivision=24):
@@ -43,3 +46,4 @@ def polyTorus(path, name="polyTorus", radiusX=1, radiusY=0.5, scale=1, rowsDivis
     torus.parm("scale").set(scale) # scale
     torus.parm("rows").set(rowsDivision) # rows division
     torus.parm("cols").set(colsDivision) # columns division
+    return torus
