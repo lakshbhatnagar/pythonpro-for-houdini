@@ -47,3 +47,15 @@ def polyTorus(path, name="polyTorus", radiusX=1, radiusY=0.5, scale=1, rowsDivis
     torus.parm("rows").set(rowsDivision) # rows division
     torus.parm("cols").set(colsDivision) # columns division
     return torus
+
+# polygon grid
+def polyPlane(path, name="polyPlane", type="poly", connectivity="quads", orient="zx", scaleX=4, scaleY=4, rowsDivision=10, colsDivision=10):
+    plane = hou.node(path).createNode("grid")
+    plane.setName(name) # plane name
+    plane.parm("type").set(type) # setting it's type
+    plane.parm("surftype").set(connectivity) # connectivity method
+    plane.parm("orient").set(orient) # plane orientation
+    plane.parm("sizex").set(scaleX) # scale X
+    plane.parm("sizey").set(scaleY) # scale Y
+    plane.parm("rows").set(rowsDivision) # rows division
+    plane.parm("cols").set(colsDivision) # cols division 
