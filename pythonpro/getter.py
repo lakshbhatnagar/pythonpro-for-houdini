@@ -10,6 +10,12 @@ def getSelectedNodes():
 def getSelectedItems():
     for sel in hou.selectedItems():
         return sel
+    
+# getting a list of selected nodes
+def getAllSelectedNodes():
+    # selected nodes
+    selNodeList = hou.selectedNodes()
+    return selNodeList
 
 # getting selected node path
 def getSelectedNodePath():
